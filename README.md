@@ -8,10 +8,10 @@ This image is based on alpine:latest. So it's one of simplest and smallest tor p
 
 ### How to use this image
 
-Detach mode
+Detach mode, with container name
 
 ```
-docker run -d -p 9050:9050 voldedore/tor
+docker run --name tor -d -p 9050:9050 voldedore/tor
 ```
 
 or run it with attach mode
@@ -31,6 +31,12 @@ when in attach mode
 
 ```
 Ctrl + C
+```
+
+### Run an exited container with container name `tor` (see above)
+
+```
+docker run tor
 ```
 
 ### Older version
